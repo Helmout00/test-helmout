@@ -9,7 +9,9 @@
 
 <h2>Dé</h2>
 <div class="item">
-  <div class="<%=@game.dice.showing_face%>"></div>
+  <div class="<%=@game.dice.showing_face%>">
+    <%= button_to "x", crop_fruit_path(fruit) %>
+  </div>
 </div>
 <p>Dernier tirage : <%=@game.dice.showing_face%></p>
 <%= button_to "Lancez le Dé", roll_dice_path %>
@@ -25,4 +27,5 @@
   <div class="view_crow__wing"></div>
 </div>
 <p>Avancement : <%=@game.crow.advancement%></p>
+
 <%= button_to "Avancez le corbeau", crow_step_path %>
