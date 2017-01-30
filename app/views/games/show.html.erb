@@ -28,7 +28,7 @@
 <%@game.fruits.on_tree.each do |fruit|%>
 <div class="item">
   <div class="<%=fruit.color%>"></div>
-<%= link_to "x", crop_fruit_path(fruit) %>
+<%= button_to "x", crop_fruit_path(fruit) %>
 </div>
 
 <%end%>
