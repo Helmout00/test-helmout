@@ -1,16 +1,40 @@
 <h1>Games <%=@game.id%></h1>
-
+<div class="cloudcontain1">
+    <div class="cloud1"></div>
+    <div class="cloud2"></div>
+    <div class="cloud3"></div>
+  </div>
+  
+  <div class="cloudcontain2">
+    <div class="cloud1"></div>
+    <div class="cloud2"></div>
+    <div class="cloud3"></div>
+  </div>
+  
+  <div class="cloudcontain3">
+    <div class="cloud1"></div>
+    <div class="cloud2"></div>
+    <div class="cloud3"></div>
+  </div>
+  
+  <div class="cloudcontain4">
+    <div class="cloud1"></div>
+    <div class="cloud2"></div>
+    <div class="cloud3"></div>
+  </div>
+  
 <h2>Fruits</h2>
 <%@game.fruits.on_tree.each do |fruit|%>
 <div class="item">
   <div class="<%=fruit.color%>"></div>
+  <%= button_to "x", crop_fruit_path(fruit) %>
 </div>
+
 <%end%>
 
 <h2>Dé</h2>
 <div class="item">
   <div class="<%=@game.dice.showing_face%>">
-    <%= button_to "x", crop_fruit_path(fruit) %>
   </div>
 </div>
 <p>Dernier tirage : <%=@game.dice.showing_face%></p>
@@ -29,3 +53,4 @@
 <p>Avancement : <%=@game.crow.advancement%></p>
 
 <%= button_to "Avancez le corbeau", crow_step_path %>
+<div class="sand"></div>
