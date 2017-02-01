@@ -4,6 +4,10 @@ body{
   min-height: 1080px;
 }
 
+img {
+      margin-left: -4px;
+}
+
 a {
   font-size: 8px;
   color: black;
@@ -278,6 +282,7 @@ a:after {
   position:relative;
   box-shadow:0 0 10px #000;
   margin-top:20px;
+  display: inline-block
 }
 .view_crow__eye{
   width:5px;

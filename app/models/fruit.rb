@@ -13,9 +13,6 @@ class Fruit < ApplicationRecord
     self.where.not(croped_at: nil).order croped_at: :asc
     end
 
-    # Return an ActiveRecord::Relation
-    # if nil is passed as color, it is treated as any
-    # color (it does not scope).
     def of_color color
       condition = color && {color: color.downcase.to_sym}
       self.where condition
