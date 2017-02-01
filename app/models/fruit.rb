@@ -3,16 +3,24 @@ class Fruit < ApplicationRecord
 
   delegate :game, to: :orchard
 
-  def self.on_tree
-    self.where croped_at: nil
-  end
+  class << self
 
-  # Return an ActiveRecord::Relation
-  # if nil is passed as color, it is treated as any
-  # color (it does not scope).
-  def self.of_color color
-    condition = color && {color: color.downcase.to_sym}
-    self.where condition
+    def on_tree
+      self.where croped_at: nil
+    end
+
+    def order_by_last_ressently_fruit
+    self.where.not(croped_at: nil).order croped_at: :asc
+    end
+
+    # Return an ActiveRecord::Relation
+    # if nil is passed as color, it is treated as any
+    # color (it does not scope).
+    def of_color color
+      condition = color && {color: color.downcase.to_sym}
+      self.where condition
+    end
+      
   end
 
   def crop

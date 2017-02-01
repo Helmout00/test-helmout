@@ -1,6 +1,7 @@
-body {
+body{
   background: -webkit-linear-gradient(45deg, rgba(242,249,255,1) 0%,rgba(64,150,238,1) 100%); 
   overflow: hidden;
+  min-height: 1080px;
 }
 
 a {
@@ -118,7 +119,7 @@ a:after {
     border-radius: 50px;
     background: white;
     position :absolute;
-    z-index: 2;
+    z-index: 1;
     margin: 45px;
 }
 
@@ -128,7 +129,7 @@ a:after {
     border-radius: 45px;
     background: white;
     position :absolute;
-    z-index: 3;
+    z-index: 1;
     margin: 0px;
     top: 50px;
 }

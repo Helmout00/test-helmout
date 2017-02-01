@@ -7,9 +7,23 @@ class Game < ApplicationRecord
 
   before_create :setup_game
 
-  # private
 
-  def status
+  #return Game::ActiveRecord_Relation
+  class << self
+
+    def order_by_last_ressently_played
+      self.order updated_at: :desc
+    end
+
+    def recent
+      start_range = 1.week.ago
+      stop_range = Time.now
+      self.where created_at: [start_range..stop_range]
+    end
+
+  end
+
+  def status1
     "Crow advancement is #{crow.advancement}/6
     There are #{fruits.on_tree.count} fruits left in orchard."
   end

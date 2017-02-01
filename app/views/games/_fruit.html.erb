@@ -1,0 +1,6 @@
+<%@game.fruits.on_tree.each do |fruit|%>
+  <div class="item">
+    <div class="<%=fruit.color%>"></div>
+    <%= button_to "x", crop_fruit_path(fruit) unless fruit.croped_at%>
+  </div>
+<%end%>

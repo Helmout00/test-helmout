@@ -1,5 +1,6 @@
 <div class="container">
-<h1>Games <%=@game.id%></h1>
+<h1>Games <%= @game.id %></h1>
+<h2>Status : <%= @game.status %></h2>
 <div class="cloudcontain1">
     <div class="cloud1"></div>
     <div class="cloud2"></div>
@@ -25,13 +26,7 @@
   </div>
   
 <h2>Fruits</h2>
-<%@game.fruits.on_tree.each do |fruit|%>
-<div class="item">
-  <div class="<%=fruit.color%>"></div>
-<%= button_to "x", crop_fruit_path(fruit) %>
-</div>
-
-<%end%>
+<%= render 'fruit' %>
 
 <h2>Dé</h2>
 <div class="item">
@@ -46,5 +41,11 @@
 <p>Avancement : <%=@game.crow.advancement%></p>
 
 <%= button_to "Avancez le corbeau", crow_step_path %>
+<br><br>
+<%= button_to "gagner", games_win_path %>
+<br><br>
+<%= button_to "perdu", games_lost_path %>
+<br><br><br><br>
 <div class="sand"></div>
 </div>
+
