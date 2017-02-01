@@ -20,9 +20,13 @@ class Fruit < ApplicationRecord
       condition = color && {color: color.downcase.to_sym}
       self.where condition
     end
-      
-  end
 
+    def on_basket
+      self.where.not(croped_at: nil).order :croped_at
+    end
+
+  end
+      
   def crop
     self.croped_at = DateTime.now
   end

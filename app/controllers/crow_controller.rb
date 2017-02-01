@@ -5,7 +5,10 @@ class CrowController < ApplicationController
     if crow.save
       redirect_to game_path
     else
-      redirect_to game_path, notice: "#{fruit.error.messages}"
+      game = Game.find params[:id]
+      game.status = "loose"
+      game.save
+      redirect_to game_path
     end
   end
 
