@@ -19,17 +19,19 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
+fr:
   games:
     index:
-      game: "Crow game"
-      play: "play"
+      game: "Jeu du corbeau"
+      play: "jouer"
     show:
-      game: "Crow game"
-      dice: "dice"
-      crow: "crow"
-      basket: "basket"
-      win: "win"
-      loose: "loose"
-      move_crow: "move crow"
-      last_draw: "last draw"
+      game: "Jeu du corbeau"
+      dice: "dé"
+      crow: "Corbeau"
+      basket: "Panier"
+      win: "gagné"
+      loose: "perdu"
+      move_crow: "avancez le corbeau"
+      last_draw: "dernier tirage "
+
+

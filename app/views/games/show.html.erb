@@ -1,5 +1,5 @@
 <div class="container">
-<h1>Games <%= @game.id %></h1>
+<h1><%= t('.game') %> <%= @game.id %></h1>
 <h2>Status : <%= @game.status %></h2>
 <div class="cloudcontain1">
     <div class="cloud1"></div>
@@ -28,22 +28,22 @@
 <h2>Fruits</h2>
 <%= render 'fruit' %>
 
-<h2>Dé</h2>
+<h2><%= t('.dice') %></h2>
 <div class="item">
   <div class="<%=@game.dice.showing_face%>">
   </div>
 </div>
-<p>Dernier tirage : <%=@game.dice.showing_face%></p>
+<p><%= t('.last_draw') %> : <%=@game.dice.showing_face%></p>
 <%= button_to "Lancez le Dé", roll_dice_path %>
 
-<h2>Corbeau</h2>
+<h2><%= t('.crow') %></h2>
 
 <%= render 'crow' %>
 <p>Avancement : <%=@game.crow.advancement%></p>
 
-<%= button_to "Avancez le corbeau", crow_step_path %>
+<%= button_to  t('.move_crow'), crow_step_path %>
 <br><br>
-<h2>Panier</h2>
+<h2><%= t('.basket') %></h2>
 <%= render 'fruit_basket'%>
 <br><br>
 <%= button_to "gagner", games_win_path %>
