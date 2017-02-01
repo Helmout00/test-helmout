@@ -16,4 +16,120 @@
 
  .container {
   text-align: left;
+  margin-top: 0;
+}
+
+html , body {
+  /*background-color: #CEECF5;*/
+  height: 100%;
+  font-family: "Noto Sans","Helvetica Neue", Helvetica , sans-serif;
+  background: white;
+}
+
+/*wrapper*/
+.wrapper {
+  min-height: 100%;
+  position: relative;
+  padding: 20px 0px 40px 0px;
+}
+
+.container {
+  margin-top: 0;
+}
+
+/*Header*/
+.top-bar {
+  background-color: #CC342D;
+  /*color: black;*/
+  position: fixed;
+  height: 20px;
+  top: 0px;
+  width: 100%;
+  z-index: 99999;
+}
+
+.top-bar address {
+  display: inline-block;
+}
+
+.top-bar a {
+  line-height: 20px;
+  font-size: 18px;
+  color: black;
+  text-decoration: none;
+}
+.top-bar i {
+  font-size: 18px;
+  line-height: 20px;
+}
+.sosial-network{
+  display: inline;
+}
+
+
+.top-bar .fb {
+  color: #3B5998;
+}
+.top-bar .tw {
+  color: #55ACEE;
+}
+.top-bar .ld {
+  color: #0E76A8;
+}
+
+.navbar {
+  border-radius: 0;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: white;
+}
+
+.nav-bar {
+  background-color: rgb(88, 84, 80);
+  border: 0;
+  color: white;
+}
+
+.vcenter {
+  display: inline-block;
+}
+
+.pull-left i{
+  position: absolute;
+}
+
+.vcenter h2 ,.vcenter h3 {
+  padding-left: 75px;
+  font-size: 17px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+
+}
+
+.main-nav {
+  text-align: right;
+  color: rgb(255, 255, 255);
+  padding: 6px;
+}
+
+/*Footer*/
+.main-footer {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  min-height: 40px;
+  position:absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+.copyright {
+  padding-top: 10px;
+  text-align: center;
+  color: white;
+}
+
+.copyright a {
+  text-decoration: none;
+  color: white;
 }

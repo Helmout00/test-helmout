@@ -1,55 +1,55 @@
-<div class="container">
-<h1><%= t('.game') %> <%= @game.id %></h1>
-<h2>Status : <%= @game.status %></h2>
-<div class="cloudcontain1">
-    <div class="cloud1"></div>
-    <div class="cloud2"></div>
-    <div class="cloud3"></div>
-  </div>
-  
-  <div class="cloudcontain2">
-    <div class="cloud1"></div>
-    <div class="cloud2"></div>
-    <div class="cloud3"></div>
-  </div>
-  
-  <div class="cloudcontain3">
-    <div class="cloud1"></div>
-    <div class="cloud2"></div>
-    <div class="cloud3"></div>
-  </div>
-  
-  <div class="cloudcontain4">
-    <div class="cloud1"></div>
-    <div class="cloud2"></div>
-    <div class="cloud3"></div>
-  </div>
-  
-<h2>Fruits</h2>
-<%= render 'fruit' %>
+<div class="background">
+  <h1><%= t('.game') %> <%= @game.id %></h1>
+  <h2>Status : <%= @game.status %></h2>
+  <div class="cloudcontain1">
+      <div class="cloud1"></div>
+      <div class="cloud2"></div>
+      <div class="cloud3"></div>
+    </div>
+    
+    <div class="cloudcontain2">
+      <div class="cloud1"></div>
+      <div class="cloud2"></div>
+      <div class="cloud3"></div>
+    </div>
+    
+    <div class="cloudcontain3">
+      <div class="cloud1"></div>
+      <div class="cloud2"></div>
+      <div class="cloud3"></div>
+    </div>
+    
+    <div class="cloudcontain4">
+      <div class="cloud1"></div>
+      <div class="cloud2"></div>
+      <div class="cloud3"></div>
+    </div>
+    
+  <h2>Fruits</h2>
+  <%= render 'fruit' %>
 
-<h2><%= t('.dice') %></h2>
-<div class="item">
-  <div class="<%=@game.dice.showing_face%>">
+  <h2><%= t('.dice') %></h2>
+  <div class="item">
+    <div class="<%=@game.dice.showing_face%>">
+    </div>
   </div>
-</div>
-<p><%= t('.last_draw') %> : <%=@game.dice.showing_face%></p>
-<%= button_to "Lancez le Dé", roll_dice_path %>
+  <p><%= t('.last_draw') %> : <%=@game.dice.showing_face%></p>
+  <%= button_to "Lancez le Dé", roll_dice_path %>
 
-<h2><%= t('.crow') %></h2>
+  <h2><%= t('.crow') %></h2>
 
-<%= render 'crow' %>
-<p>Avancement : <%=@game.crow.advancement%></p>
+  <%= render 'crow' %>
+  <p>Avancement : <%=@game.crow.advancement%></p>
 
-<%= button_to  t('.move_crow'), crow_step_path %>
-<br><br>
-<h2><%= t('.basket') %></h2>
-<%= render 'fruit_basket'%>
-<br><br>
-<%= button_to "gagner", games_win_path %>
-<br><br>
-<%= button_to "perdu", games_lost_path %>
-<br><br><br><br>
-<div class="sand"></div>
+  <%= button_to  t('.move_crow'), crow_step_path %>
+  <br><br>
+  <h2><%= t('.basket') %></h2>
+  <%= render 'fruit_basket'%>
+  <br><br>
+  <%= button_to "gagner", games_win_path %>
+  <br><br>
+  <%= button_to "perdu", games_lost_path %>
+  <br><br><br><br>
+  <div class="sand"></div>
 </div>
 
