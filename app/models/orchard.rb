@@ -1,5 +1,5 @@
 class Orchard < ApplicationRecord
-  has_many :fruits
+  has_many :fruits, dependent: :destroy
   belongs_to :game
   
   validates_numericality_of  :fruits_count, equal_to: 16, on: :save

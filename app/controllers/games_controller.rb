@@ -1,6 +1,6 @@
 class GamesController < ApplicationController
   def index
-    @games = Game.all
+    @games = Game.of_user current_user
   end
 
   def show
@@ -11,7 +11,7 @@ class GamesController < ApplicationController
     game = Game.find params[:id]
     game.status = "win"
     game.save
-    redirect_to game_path
+    redirect_to game_path(params[:id])
   end
 
   def set_status_to_lost
